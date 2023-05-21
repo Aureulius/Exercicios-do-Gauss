@@ -28,21 +28,20 @@
         <h1>Informações Nutricionais</h1>
         <img src="logo.jpg" alt="Frutas" width="100" height="100">
 
-        <form autocomplete="on" action="resultado.html" target="_blank">
-
+        <form autocomplete="on">
             <label for="id_alimento">Alimento:</label>
-            <input type="text" id="id_alimento" name="alimento" placeholder="Ex: Maça" required autofocus><br><br>
+            <input type="text" id="id_alimento" name="alimento" placeholder="Ex: Maça" autofocus><br><br>
 
             <label for="id_caracteristica">Caracteristica:</label>
-            <input type="text" id="id_caracteristica" name="caracteristica" placeholder="Ex: Fruta" required><br><br>
+            <input type="text" id="id_caracteristica" name="caracteristica" placeholder="Ex: Fruta"><br><br>
 
             <label for="id_calorias">Calorias:</label>
-            <input type="number" id="id_calorias" name="calorias" placeholder="Ex: 5" required><br><br>
+            <input type="number" id="id_calorias" name="calorias" placeholder="Ex: 5"><br><br>
 
             <label for="id_quantidade">Quantidade:</label>
-            <input type="number" id="id_quantidade" name="quantidade" placeholder="Ex: 10" required><br><br>
+            <input type="number" id="id_quantidade" name="quantidade" placeholder="Ex: 10"><br><br>
 
-            <button type="submit" class="submit_button" onclick="salvar_informacao()">Salvar</button>
+            <button type="button" class="submit_button" onclick="salvar_informacao()">Salvar</button>
             <button type="reset" class="reset_button">Redefinir</button><br><br><br>
         </form>
 
@@ -64,20 +63,27 @@
             var calorias = document.getElementById("id_calorias").value;
             var quantidade = document.getElementById("id_quantidade").value;
 
-            var tabela = document.getElementById("tabela");
+            if (alimento !== "", caracteristica !== "", calorias !== "", quantidade !== "") {
+                var tabela = document.getElementById("tabela");
 
-            var newRow = tabela.insertRow();
-            var cell1 = newRow.insertCell(0);
-            cell1.innerHTML = alimento;
+                var newRow = tabela.insertRow();
+                var cell1 = newRow.insertCell(0);
+                cell1.innerHTML = alimento;
 
-            var cell2 = newRow.insertCell(1);
-            cell2.innerHTML = caracteristica;
+                var cell2 = newRow.insertCell(1);
+                cell2.innerHTML = caracteristica;
 
-            var cell3 = newRow.insertCell(2);
-            cell3.innerHTML = calorias;
+                var cell3 = newRow.insertCell(2);
+                cell3.innerHTML = calorias;
 
-            var cell4 = newRow.insertCell(3);
-            cell4.innerHTML = quantidade;
+                var cell4 = newRow.insertCell(3);
+                cell4.innerHTML = quantidade;
+
+                alert("Informações salvas com sucesso!")
+            }
+        else{
+            alert("Preencha as informações antes de salvar.")
+        }
         }
     </script>
 </body>
