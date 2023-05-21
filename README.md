@@ -1,2 +1,2 @@
-# Exercícios Gauss
-Exercícios do curso de programação Gauss.
+# Exércicio do Formulário de Comentários
+Primeiro Formulário feito, com o tema de "Feedback".
