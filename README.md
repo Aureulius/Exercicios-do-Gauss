@@ -1,2 +1,2 @@
-# Exércicio do Formulário de Feedback
-Primeiro formulário com o tema de "Feedback" feito.
+# Exércicios do Curso Gauss
+Exércicios feitos que o curso Gauss passou.
