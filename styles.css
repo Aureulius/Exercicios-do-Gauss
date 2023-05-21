@@ -1,0 +1,13 @@
+.submit_button {
+    background-color: green;
+    color: white;
+}
+
+.reset_button {
+    background-color: red;
+    color: white;
+}
+
+.text_area {
+    resize: none;
+}
