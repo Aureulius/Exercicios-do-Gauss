@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Informações Nutricionais</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <h1>Informações Nutricionais</h1>
+        <img src="logo.jpg" alt="Frutas" width="100" height="100">
+
+        <form autocomplete="on" action="resultado.html" target="_blank">
+
+            <label for="id_alimento">Alimento:</label>
+            <input type="text" id="id_alimento" name="alimento" placeholder="Ex: Maça" required autofocus><br><br>
+
+            <label for="id_caracteristica">Caracteristica:</label>
+            <input type="text" id="id_caracteristica" name="caracteristica" placeholder="Ex: Fruta" required><br><br>
+
+            <label for="id_calorias">Calorias:</label>
+            <input type="number" id="id_calorias" name="calorias" placeholder="Ex: 5" required><br><br>
+
+            <label for="id_quantidade">Quantidade:</label>
+            <input type="number" id="id_quantidade" name="quantidade" placeholder="Ex: 10" required><br><br>
+
+            <button type="submit" class="submit_button" onclick="salvar_informacao()">Salvar</button>
+            <button type="reset" class="reset_button">Redefinir</button><br><br><br>
+        </form>
+
+        <h2>Informações Nutricionais</h2>
+        <table id="tabela">
+            <tr>
+                <th>Alimento</th>
+                <th>Caracteristica</th>
+                <th>Calorias</th>
+                <th>Gramas</th>
+            </tr>
+        </table>
+    </fieldset>
+
+    <script>
+        function salvar_informacao() {
+            var alimento = document.getElementById("id_alimento").value;
+            var caracteristica = document.getElementById("id_caracteristica").value;
+            var calorias = document.getElementById("id_calorias").value;
+            var quantidade = document.getElementById("id_quantidade").value;
+
+            var tabela = document.getElementById("tabela");
+
+            var newRow = tabela.insertRow();
+            var cell1 = newRow.insertCell(0);
+            cell1.innerHTML = alimento;
+
+            var cell2 = newRow.insertCell(1);
+            cell2.innerHTML = caracteristica;
+
+            var cell3 = newRow.insertCell(2);
+            cell3.innerHTML = calorias;
+
+            var cell4 = newRow.insertCell(3);
+            cell4.innerHTML = quantidade;
+        }
+    </script>
+</body>
+
+</html>
