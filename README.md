@@ -1,4 +1,2 @@
-# Exércicios do Curso Gauss
-Exércicios feitos que o curso Gauss passou.
-
-# Os exércicios estão dentro de branchs para melhor organização!
+# Exércicio do Formulário de Feedback
+Primeiro formulário com o tema de "Cadastro" feito.
