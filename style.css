@@ -1,0 +1,17 @@
+.legend {
+    font-size: 30px;
+}
+
+.sublegend {
+    font-size: 20px;
+}
+
+.submitbutton {
+    background-color: green;
+    color: white;
+}
+
+.resetbutton {
+    background-color: red;
+    color: white;
+}
